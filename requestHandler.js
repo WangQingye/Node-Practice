@@ -28,7 +28,7 @@ function start(response) {
 
 function upload(response, request) {
 	console.log("request for upload was called");
- // 	response.writeHead(200, {"Content-Type": "text/plain; charset=utf8"});
+// 	response.writeHead(200, {"Content-Type": "text/plain; charset=utf8"});
 	// response.write(querystring.parse(postData).text);
 	// response.end();
   var form = new formidable.IncomingForm();
@@ -72,7 +72,7 @@ function show(response, request) {
   });
 }
 
-
+　
 
 
 var handler = {
@@ -80,6 +80,6 @@ var handler = {
 	"/start" : start,
 	"/upload" : upload,
   "/show" : show
-}
+};
 
 exports.handler = handler;
