@@ -10,7 +10,9 @@ exec("git commit -m 'node'", function(error, stdout, stderr){
 	console.log(stdout);
 });
 exec("git push origin master", function(error, stdout, stderr){
-	console.log(stdout);
+	console.log('1', stdout);
+	console.log('2', error);
+	console.log('3', stderr);
 });
 // exec('git add .');
 // exec("git commit -m");
