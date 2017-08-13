@@ -6,7 +6,7 @@ console.log(exec);
 exec("git add .", function(error, stdout, stderr){
 	console.log(stdout);
 });
-exec("git commit -m 'node'", function(error, stdout, stderr){
+exec("git commit -m 'node1'", function(error, stdout, stderr){
 	console.log(stdout);
 });
 exec("git push origin master", function(error, stdout, stderr){
