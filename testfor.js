@@ -1,7 +1,11 @@
 var fs = require('fs');
 var exec = require('child_process').exec
-var num = Math.ceil(Math.random() * 10)
+var num = Math.ceil(Math.random() * 100)
 fs.writeFileSync('test.txt', num, 'utf8');
-exec('git add .');
-exec("git commit -m 'test'");
-exec('git push origin master');
+console.log(exec);
+exec('git add .', function(error, stdout, stderr){
+	console.log(stdout);
+});
+// exec('git add .');
+// exec("git commit -m");
+// exec('git push origin master');
