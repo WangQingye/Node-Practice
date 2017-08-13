@@ -9,11 +9,11 @@ exec("git add .", function(error, stdout, stderr){
 exec("git commit -m " + num, function(error, stdout, stderr){
 	console.log(stdout);
 });
-exec("git push origin master", function(error, stdout, stderr){
+setTimeout(exec("git push origin master", function(error, stdout, stderr){
 	console.log('1', stdout);
 	console.log('2', error);
 	console.log('3', stderr);
-});
+}),3000);
 // exec('git add .');
 // exec("git commit -m");
 // exec('git push origin master');
