@@ -12,7 +12,7 @@ exec("git commit -m " + num, function(error, stdout, stderr){
 });
 function push(){
 	exec("git push origin master", function(error, stdout, stderr){
-	console.log('push', stdout);
+		console.log('push', stdout);
 	})
 }
 setTimeout(push,3000);
