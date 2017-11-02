@@ -16,6 +16,10 @@ exec("git add .", function(error, stdout, stderr){
 function push(){
 	exec("git push origin master", function(error, stdout, stderr){
 		console.log('push', stdout);
+		if (error) {
+			console.log('push failed', error)
+			return;
+		}
 		if (times >= 1)
 		{
 			console.log('do it again');
