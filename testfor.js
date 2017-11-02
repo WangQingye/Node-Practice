@@ -1,8 +1,7 @@
 var fs = require('fs');
 var times = process.argv[2];
-console.log(times);
+console.log(`plan to push ${times} times`);
 var exec = require('child_process').exec
-console.log(exec);
 var num = Math.ceil(Math.random() * 100)
 fs.writeFileSync('test1.txt', num, 'utf8');
 
