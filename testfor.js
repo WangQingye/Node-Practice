@@ -19,7 +19,7 @@ function push(){
 			console.log('push failed', error)
 			return;
 		}
-		if (times >= 1)
+		if (times > 1)
 		{
 			console.log('do it again');
 			exec("node testfor " + (times - 1))
