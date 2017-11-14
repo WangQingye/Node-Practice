@@ -25,17 +25,9 @@ exec("git pull .", function(error, stdout, stderr){
 				if (times > 1)
 				{
 					console.log('do it again');
-					exec("node testfor " + (times - 1))
+					exec("start node testfor " + (times - 1))
 				}
 			})
 		});
 	});
 });
-
-
-
-
-// function push(){
-
-// }
-// setTimeout(push,3000);
