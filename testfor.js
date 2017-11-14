@@ -6,18 +6,18 @@ var num = Math.ceil(Math.random() * 100)
 
 //  first pull from repo to avoid the issue if other repo had push 
 exec("git pull .", function(error, stdout, stderr){
-	console.log('pull success', stdout);
+	console.log('pull success: \n', stdout);
 	//  second change some file
 	fs.writeFileSync('test1.txt', num, 'utf8');
 	// third add the changes
 	exec("git add .", function(error, stdout, stderr){
-		console.log('add success', stdout);
+		console.log('add success: \n', stdout);
 		// forth commit the changes
 		exec("git commit -m " + num, function(error, stdout, stderr){
-			console.log('commit success', stdout);
+			console.log('commit success: \n', stdout);
 			// fifth push the commit
 			exec("git push origin master", function(error, stdout, stderr){
-				console.log('push success', stdout);
+				console.log('push success: \n', stdout);
 				if (error) {
 					console.log('push failed', error)
 					return;
